@@ -1,3 +1,4 @@
+
 /**
  * 
  */
@@ -122,7 +123,7 @@ class Book2 extends Book {
 
 	@Override
 	public void Print() {
-		System.out.println("Non-Fiction Book: " + getBookName() + ", Book ID: " + getBookId() + ", Price: " + getPrice()
+		System.out.println("Book name " + getBookName() + ", Book ID: " + getBookId() + ", Price: " + getPrice()
 				+ ", Genre: " + getGenre() + ", Author: " + getAuthor() + ", Issue Period: " + getIssuePeriod()
 				+ " days, Subject: " + subject);
 	}
@@ -143,8 +144,7 @@ public class Library {
 		Book3.Print();
 		Book4.Print();
 
-		Book3.setPrice(450.00);
-		Book3.Print();
+		
 
 	}
 
