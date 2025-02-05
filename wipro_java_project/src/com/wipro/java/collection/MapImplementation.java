@@ -20,7 +20,7 @@ public class MapImplementation {
         }
         
         System.out.println("\nIterating through the map:");
-        // Corrected entrySet() and key/value access
+        //  entrySet() and key/value access
         for (Map.Entry<Integer, String> entry : map.entrySet()) {
             System.out.println(entry.getKey() + ": " + entry.getValue());
         }
@@ -29,7 +29,7 @@ public class MapImplementation {
         map.remove(2);
         
         System.out.println("\nMap after removal of key 2:");
-        // Corrected entrySet() and key/value access
+        //  entrySet() and key/value access
         for (Map.Entry<Integer, String> entry : map.entrySet()) {
             System.out.println(entry.getKey() + ": " + entry.getValue());
         }
