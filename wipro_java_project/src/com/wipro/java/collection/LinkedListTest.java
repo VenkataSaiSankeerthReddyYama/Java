@@ -3,7 +3,7 @@ package com.wipro.java.collection;
 import java.util.LinkedList;
 import java.util.List;
 
-class LinkedListTest {
+public class LinkedListTest {
     public static void main (String[] args) {
         
         int n = 5;
