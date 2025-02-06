@@ -1,29 +1,25 @@
 package com.wipro.java.collection;
 
-public class Movie1 {
+class Movie1 {
+    private String n;
+    private double r;
+    private int y;
 
-	private String name;
-	private double rating;
-	private int year;
+    public Movie1(String n, double r, int y) {
+        this.n = n;
+        this.r = r;
+        this.y = y;
+    }
 
-	// Constructor
-	public Movie1(String name, double rating, int year) {
-		this.name = name;
-		this.rating = rating;
-		this.year = year;
-	}
+    public String getN() {
+        return n;
+    }
 
-	// Getters
-	public String getName() {
-		return name;
-	}
+    public double getR() {
+        return r;
+    }
 
-	public double getRating() {
-		return rating;
-	}
-
-	public int getYear() {
-		return year;
-	}
-
+    public int getY() {
+        return y; // Fixed by removing any non-breaking spaces
+    }
 }

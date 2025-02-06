@@ -1,34 +1,55 @@
 package com.wipro.java.collection;
 
-public class Movie {
-    private String name;
-    private double rating;
-    private int year;
+import java.util.ArrayList;
+import java.util.Collections;
 
-    // Constructor
-    public Movie(String name, double rating, int year) {
-        this.name = name;
-        this.rating = rating;
-        this.year = year;
+class Movie implements Comparable<Movie> {
+    private String n; // Movie Name
+    private double r; // Movie Rating
+    private int y; // Release year 
+
+    public Movie(String n, double r, int y) {
+        this.n = n;
+        this.r = r;
+        this.y = y;
     }
 
-    // Getters
+    public int compareTo(Movie m) {
+        // Sort by highest rating first
+        if (this.r < m.r) {
+            return 1;  // Current movie has lower rating
+        } else if (this.r > m.r) {
+            return -1; // Current movie has higher rating
+        } else {
+            return 0;  // Ratings are equal
+        }
+    }
+
     public String getName() {
-        return name;
+        return n;
     }
 
     public double getRating() {
-        return rating;
+        return r;
     }
 
     public int getYear() {
-        return year;
+        return y;
     }
 
-    // Override toString method to print movie details
-    @Override
-    public String toString() {
-        return name + " (" + year + ") - Rating: " + rating;
-    }
-}
+    public static void main(String[] args) {
+        ArrayList<Movie> l = new ArrayList<>();
 
+        l.add(new Movie("RRR", 8.7, 2023));
+        l.add(new Movie("PUSHPA", 8.8, 2024));
+        l.add(new Movie("BAHUBALI", 9.3, 2018));
+        l.add(new Movie("KGF", 9.4, 2020)); // Added another movie
+
+        Collections.sort(l);
+
+        System.out.println("Movies after sorting by rating (Descending):");
+        for (Movie m : l) {
+            System.out.println(m.getName() + " " + m.getRating() + " " + m.getYear());
+        }
+    } // This closing brace closes the main method.
+} // This closing brace closes the Movie class.
