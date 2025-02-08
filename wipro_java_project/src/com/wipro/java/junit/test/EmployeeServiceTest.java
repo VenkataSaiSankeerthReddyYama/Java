@@ -12,14 +12,14 @@ public class EmployeeServiceTest {
     @Before
     public void setUp() {
         m = new EmployeeService();
-        m.addEmployee(new Employee(1, "Sankeerth", "IT", 50000.0, LocalDate.of(2022, 1, 10)));
-        m.addEmployee(new Employee(2, "Suhail", "HR", 60000.0, LocalDate.of(2021, 5, 20)));
-        m.addEmployee(new Employee(3, "Hulk", "Finance", 70000.0, LocalDate.of(2020, 8, 15)));
+        m.addEmployee(new Employee(1, "Alice", "IT", 50000.0, LocalDate.of(2022, 1, 10)));  // Changed John to Alice
+        m.addEmployee(new Employee(2, "Bob", "HR", 60000.0, LocalDate.of(2021, 5, 20)));    // Changed Bhava to Bob
+        m.addEmployee(new Employee(3, "Charlie", "Finance", 70000.0, LocalDate.of(2020, 8, 15)));  // Changed Tharini to Charlie
     }
 
     @Test
     public void testAddEmployee() {
-        Employee emp = new Employee(4, "Ironman", "IT", 55000.0, LocalDate.of(2023, 3, 5));
+        Employee emp = new Employee(4, "David", "IT", 55000.0, LocalDate.of(2023, 3, 5)); // Changed Michael to David
         m.addEmployee(emp);
         assertEquals(4, m.getAllEmployees().size());
     }
@@ -34,7 +34,7 @@ public class EmployeeServiceTest {
     public void testSearchEmployee() {
         Employee emp = m.searchEmployee(2);
         assertNotNull(emp);
-        assertEquals("Suhail", emp.getName());
+        assertEquals("Bob", emp.getName());  // Changed Bhava to Bob
     }
 
     @Test
@@ -52,15 +52,15 @@ public class EmployeeServiceTest {
     public void testFilterByDepartment() {
         List<Employee> itEmployees = m.filterByDepartment("IT");
         assertEquals(1, itEmployees.size());
-        assertEquals("Sakeerth", itEmployees.get(0).getName());
+        assertEquals("Alice", itEmployees.get(0).getName()); // Changed John to Alice
     }
 
     @Test
     public void testSortByName() {
         List<Employee> sortedEmployees = m.sortByName();
-        assertEquals("Sankeerth", sortedEmployees.get(0).getName());
-        assertEquals("Suhail", sortedEmployees.get(1).getName());
-        assertEquals("Ironman", sortedEmployees.get(2).getName());
+        assertEquals("Alice", sortedEmployees.get(0).getName());  // Changed John to Alice
+        assertEquals("Bob", sortedEmployees.get(1).getName());    // Changed Michael to Bob
+        assertEquals("Charlie", sortedEmployees.get(2).getName()); // Changed Tharini to Charlie
     }
 
     @Test
