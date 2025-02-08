@@ -19,7 +19,7 @@ public class EmployeeServiceTest {
 
     @Test
     public void testAddEmployee() {
-        Employee emp = new Employee(4, "Batman", "IT", 55000.0, LocalDate.of(2023, 3, 5));
+        Employee emp = new Employee(4, "Ironman", "IT", 55000.0, LocalDate.of(2023, 3, 5));
         m.addEmployee(emp);
         assertEquals(4, m.getAllEmployees().size());
     }
