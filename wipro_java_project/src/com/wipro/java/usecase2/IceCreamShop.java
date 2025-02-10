@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-//Main Class
+//main Class
 public class IceCreamShop {
  public static void main(String[] args) {
      // Using List to Store IceCream Objects

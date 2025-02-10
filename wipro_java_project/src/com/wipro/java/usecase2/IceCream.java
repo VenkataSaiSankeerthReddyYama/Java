@@ -2,7 +2,7 @@ package com.wipro.java.usecase2;
 import java.util.*;
 import java.util.stream.Collectors;
 
-// Abstract Class for Abstraction 
+// abstract Class for Abstraction 
 // Encapsulation for IceCream class
 abstract class IceCream {
     private String flavor;
