@@ -14,7 +14,7 @@ public class CollectionMap {
         // Display the TreeMap
         treeMapManager.displayTreeMap();
 
-        // Now, create the HashMapManager instance with the TreeMap data
+        // Now, create the HashMapManager instance with the TreeMap Data
         HashMapManager hashMapManager = new HashMapManager(treeMapManager.getTreeMap());
 
         // Display the HashMap

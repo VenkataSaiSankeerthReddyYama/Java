@@ -19,7 +19,7 @@ public class TreeMapManager {
         return treeMap;
     }
 
-    // Method to display the TreeMap
+    // Method to display the Treemap
     public void displayTreeMap() {
         System.out.println("TreeMap (Ordered by Key): " + treeMap); 
     }

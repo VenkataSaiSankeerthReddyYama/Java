@@ -10,7 +10,7 @@ public class TicTacToe {
     private static char[][] board = new char[3][3]; // The game board
     private static char currentPlayer = PLAYER_X; // Starting player
 
-    // Method to initialize the board
+    // Method to initialize the Board
     public static void initializeBoard() {
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {

@@ -14,7 +14,7 @@ public class HashMapManager {
         return hashMap;
     }
 
-    // Method to display the HashMap
+    // Method to display the Hashmap
     public void displayHashMap() {
         System.out.println("HashMap (No Guaranteed Order): " + hashMap);  
     }
